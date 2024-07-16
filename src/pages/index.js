@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Blockbuster from '../components/blockbuster';
 import Link from 'next/link';
 import OptInForm from '../components/form/opt-in-form';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
 import i01 from '../../public/landing/02.png';
 import i02 from '../../public/landing/28.png';
@@ -23,6 +23,8 @@ import icoSoporte from '../../public/landing/icons/soporte.png';
 import Faqs from '../components/faqs';
 
 export default function Home() {
+  const [lastClick, setLastClick] = useState('');
+
   useEffect(() => {
     scrollDepth({
       values: [25, 50, 75, 100],
@@ -48,7 +50,14 @@ export default function Home() {
           </h1>
           <p className="md:w-2/3 ft-4 font-medium md:text-left my-12">Somos tu nueva comercializadora internacional.</p>
           <div className="flex flex-col justify-center md:justify-start items-center md:items-start mt-12">
-            <Link href="#contact"><a className="button">{cta.main}</a></Link>
+            <Link href="#contact">
+              <a
+                onClick={() => setLastClick('hero')}
+                className="button"
+              >
+                {cta.main}
+              </a>
+            </Link>
             <p className="md:w-2/3 -ft-2 md:text-left mt-4">{cta.description}</p>
           </div>
         </div>
@@ -79,7 +88,12 @@ export default function Home() {
           dirigir tu negocio y liberarte de la logística.
         </p>
         <div className="flex flex-col justify-center items-center">
-          <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+          <Link href="#contact">
+            <a
+              onClick={() => setLastClick('promise')}
+              className="button mb-4"
+            >{cta.main}</a>
+          </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
@@ -127,7 +141,12 @@ export default function Home() {
         </div>
         <div className="reading-container">
           <div className="flex flex-col justify-center items-center mt-16">
-            <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+            <Link href="#contact">
+              <a
+                onClick={() => setLastClick('benefits')}
+                className="button mb-4"
+              >{cta.main}</a>
+            </Link>
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
         </div>
@@ -154,10 +173,16 @@ export default function Home() {
             <li>Llevamos la mercancía al destino final y te mantenemos informado de la entrega.</li>
             <li>Revisamos cualquier saldo contable para finalizar con el servicio.</li>
           </ol>
-          <p className="ft-2">Contamos con un equipo con <b>más de 10 años de experiencia</b> en comercio exterior y logística
+          <p className="ft-2">Contamos con un equipo con <b>más de 10 años de experiencia</b> en comercio exterior y
+            logística
             para asegurar que todo salga en orden.</p>
           <div className="flex flex-col justify-center items-center">
-            <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+            <Link href="#contact">
+              <a
+                onClick={() => setLastClick('deliverables')}
+                className="button mb-4"
+              >{cta.main}</a>
+            </Link>
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
         </div>
@@ -184,7 +209,12 @@ export default function Home() {
         </p>
         <div className="reading-container">
           <div className="flex flex-col justify-center items-center">
-            <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+            <Link href="#contact">
+              <a
+                onClick={() => setLastClick('target')}
+                className="button mb-4"
+              >{cta.main}</a>
+            </Link>
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
         </div>
@@ -214,7 +244,12 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center mt-16">
-          <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+          <Link href="#contact">
+            <a
+              onClick={() => setLastClick('testimonials')}
+              className="button mb-4"
+            >{cta.main}</a>
+          </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
@@ -230,24 +265,32 @@ export default function Home() {
             <div className="relative w-1/2 pt-[50%]">
               <Image src={icoProveedor} layout="fill" objectFit="contain"/>
             </div>
-            <h4 className="text-center my-8 text-brand-3">Seguimiento y contacto con proveedores o clientes en el extranjero</h4>
+            <h4 className="text-center my-8 text-brand-3">Seguimiento y contacto con proveedores o clientes en el
+              extranjero</h4>
           </div>
           <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">
             <div className="relative w-1/2 pt-[50%]">
               <Image src={icoLlamada} layout="fill" objectFit="contain"/>
             </div>
-            <h4 className="text-center my-8 text-brand-3">Soporte continuo durante todo el proceso de importación/exportación</h4>
+            <h4 className="text-center my-8 text-brand-3">Soporte continuo durante todo el proceso de
+              importación/exportación</h4>
           </div>
           <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">
             <div className="relative w-1/2 pt-[50%]">
               <Image src={icoSoporte} layout="fill" objectFit="contain"/>
             </div>
-            <h4 className="text-center my-8 text-brand-3">Asistencia post-compra para resolver cualquier consulta adicional</h4>
+            <h4 className="text-center my-8 text-brand-3">Asistencia post-compra para resolver cualquier consulta
+              adicional</h4>
           </div>
         </div>
         <div className="reading-container">
           <div className="flex flex-col justify-center items-center">
-            <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
+            <Link href="#contact">
+              <a
+                onClick={() => setLastClick('guarantees')}
+                className="button mb-4"
+              >{cta.main}</a>
+            </Link>
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
         </div>
@@ -278,7 +321,9 @@ export default function Home() {
                 Regálanos unos datos y agenda tu asesoría.
               </p>
             </div>
-            <OptInForm/>
+            <OptInForm
+              lastClick={lastClick}
+            />
           </div>
         </div>
       </section>

@@ -51,7 +51,7 @@ export default function OptInForm({lastClick = ''}) {
       .then(() => {
         if (info.surveyRedirect !== '') {
           const forwardLink = document.createElement('a');
-          forwardLink.href = info.surveyRedirect;
+          forwardLink.href = info.surveyRedirect + `?name=${data.fullName}&email=${data.email}&a1=${data.phone}`;
           forwardLink.target = '_blank';
           forwardLink.click();
         }

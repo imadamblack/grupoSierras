@@ -24,7 +24,7 @@ export const info = {
     state: "Nuevo León",
   },
   optInWebhook: 'https://hook.us1.make.com/ozgegaht0m9bdb9oebw3676q99xrp8xg',
-  surveyRedirect: '',
+  surveyRedirect: 'https://calendly.com/gruposierras/consultoria-aduanal',
   privacyNotice: "/aviso-privacidad",
   termsConditions: "/aviso-privacidad",
 };

@@ -86,9 +86,7 @@ export default function OptInForm({lastClick = ''}) {
       <input
         {...register(
           'phone',
-          {
-            required: true,
-          },
+          {required: true, maxLength: 10, minLength: 10},
         )}
         className={errors.phone && '!bg-red-200'}
         onKeyDown={restrictNumber}

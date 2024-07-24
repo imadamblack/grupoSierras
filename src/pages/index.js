@@ -8,18 +8,13 @@ import i01 from '../../public/landing/02.png';
 import i02 from '../../public/landing/28.png';
 import i03 from '../../public/landing/03.png';
 import i04 from '../../public/landing/08.png';
-import i05 from '../../public/landing/09.png';
 import i06 from '../../public/landing/27.png';
 import testimonial01 from '../../public/landing/testimonio01.png';
 import testimonial02 from '../../public/landing/testimonio02.png';
 import testimonial03 from '../../public/landing/testimonio04.png';
 import icoAduana from '../../public/landing/icons/aduana.png';
 import icoAvion from '../../public/landing/icons/avion.png';
-import icoAyuda from '../../public/landing/icons/ayuda.png';
-import icoLlamada from '../../public/landing/icons/llamada.png';
 import icoMundo from '../../public/landing/icons/mundo.png';
-import icoProveedor from '../../public/landing/icons/proveedor.png';
-import icoSoporte from '../../public/landing/icons/soporte.png';
 import Faqs from '../components/faqs';
 
 export default function Home() {
@@ -254,47 +249,47 @@ export default function Home() {
         </div>
       </section>
 
-      <Blockbuster
-        overhead="Garantías"
-        title="No somos magos pero pagar multas y perder mercancía es para amateurs"
-        image={i05}
-      />
-      <section className="container my-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
-          <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">
-            <div className="relative w-1/2 pt-[50%]">
-              <Image src={icoProveedor} layout="fill" objectFit="contain"/>
-            </div>
-            <h4 className="text-center my-8 text-brand-3">Seguimiento y contacto con proveedores o clientes en el
-              extranjero</h4>
-          </div>
-          <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">
-            <div className="relative w-1/2 pt-[50%]">
-              <Image src={icoLlamada} layout="fill" objectFit="contain"/>
-            </div>
-            <h4 className="text-center my-8 text-brand-3">Soporte continuo durante todo el proceso de
-              importación/exportación</h4>
-          </div>
-          <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">
-            <div className="relative w-1/2 pt-[50%]">
-              <Image src={icoSoporte} layout="fill" objectFit="contain"/>
-            </div>
-            <h4 className="text-center my-8 text-brand-3">Asistencia post-compra para resolver cualquier consulta
-              adicional</h4>
-          </div>
-        </div>
-        <div className="reading-container">
-          <div className="flex flex-col justify-center items-center">
-            <Link href="#contact">
-              <a
-                onClick={() => setLastClick('guarantees')}
-                className="button mb-4"
-              >{cta.main}</a>
-            </Link>
-            <p className="-ft-2 text-center">{cta.description}</p>
-          </div>
-        </div>
-      </section>
+      {/*<Blockbuster*/}
+      {/*  overhead="Garantías"*/}
+      {/*  title="No somos magos pero pagar multas y perder mercancía es para amateurs"*/}
+      {/*  image={i05}*/}
+      {/*/>*/}
+      {/*<section className="container my-16">*/}
+      {/*  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">*/}
+      {/*    <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">*/}
+      {/*      <div className="relative w-1/2 pt-[50%]">*/}
+      {/*        <Image src={icoProveedor} layout="fill" objectFit="contain"/>*/}
+      {/*      </div>*/}
+      {/*      <h4 className="text-center my-8 text-brand-3">Seguimiento y contacto con proveedores o clientes en el*/}
+      {/*        extranjero</h4>*/}
+      {/*    </div>*/}
+      {/*    <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">*/}
+      {/*      <div className="relative w-1/2 pt-[50%]">*/}
+      {/*        <Image src={icoLlamada} layout="fill" objectFit="contain"/>*/}
+      {/*      </div>*/}
+      {/*      <h4 className="text-center my-8 text-brand-3">Soporte continuo durante todo el proceso de*/}
+      {/*        importación/exportación</h4>*/}
+      {/*    </div>*/}
+      {/*    <div className="relative flex flex-col items-center rounded-2xl border border-brand-1 p-16">*/}
+      {/*      <div className="relative w-1/2 pt-[50%]">*/}
+      {/*        <Image src={icoSoporte} layout="fill" objectFit="contain"/>*/}
+      {/*      </div>*/}
+      {/*      <h4 className="text-center my-8 text-brand-3">Asistencia post-compra para resolver cualquier consulta*/}
+      {/*        adicional</h4>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*  <div className="reading-container">*/}
+      {/*    <div className="flex flex-col justify-center items-center">*/}
+      {/*      <Link href="#contact">*/}
+      {/*        <a*/}
+      {/*          onClick={() => setLastClick('guarantees')}*/}
+      {/*          className="button mb-4"*/}
+      {/*        >{cta.main}</a>*/}
+      {/*      </Link>*/}
+      {/*      <p className="-ft-2 text-center">{cta.description}</p>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
 
       <Blockbuster
@@ -311,14 +306,14 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="text-white tracking-wide">
-              Obtén una asesoría gratuita para comenzar con la importación o exportación de tus mercancías.
+              Obtén una sesión gratuita para evaluar tus necesidades de logística aduanal.
             </h2>
-            <div className="mt-20 mb-12">
+            <div className="my-12">
               <p className="ft-1 text-white">
                 Ya llegaste hasta acá, <br/>
-                ya le dedicaste unos minutos de tu valioso tiempo a leer este cuento.
+                ya le dedicaste unos minutos de tu valioso tiempo a conocernos.
                 <br/><br/>
-                Regálanos unos datos y agenda tu asesoría.
+                Regálanos unos datos y platiquemos.
               </p>
             </div>
             <OptInForm

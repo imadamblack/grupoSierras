@@ -94,6 +94,7 @@ export default function OptInForm({lastClick = ''}) {
       <input
         {...register(
           'company',
+          {required: true}
         )}
         className={errors.company && '!bg-red-200'}
         placeholder="Nombre de tu empresa"/>

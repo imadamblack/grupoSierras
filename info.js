@@ -24,6 +24,7 @@ export const info = {
     state: "Ciudad de México",
   },
   optInWebhook: 'https://hook.us1.make.com/ozgegaht0m9bdb9oebw3676q99xrp8xg',
+  surveyWebhook: 'https://hook.us1.make.com/3xkxvo2k5dx9devmth3ume4j55n5hujd',
   surveyRedirect: 'https://calendly.com/gruposierras/consultoria-aduanal',
   privacyNotice: "/aviso-privacidad",
   termsConditions: "/aviso-privacidad",

@@ -26,6 +26,7 @@ export default function OptInForm({lastClick = ''}) {
     const _fbp = getCookie('_fbp');
     const payload = {...data, _fbc, _fbp};
 
+
     fetch(info.optInWebhook, {
       method: 'POST',
       body: JSON.stringify(payload),
@@ -40,6 +41,7 @@ export default function OptInForm({lastClick = ''}) {
           {email: data.email, phone: data.phone, externalID: id},
         );
         setCookie('lead', {...data, id});
+        return id;
       })
       .catch(() => {
         fbEvent(
@@ -48,15 +50,7 @@ export default function OptInForm({lastClick = ''}) {
         );
         setCookie('lead', {...data});
       })
-      .then(() => {
-        if (info.surveyRedirect !== '') {
-          const forwardLink = document.createElement('a');
-          forwardLink.href = info.surveyRedirect + `?name=${data.fullName}&email=${data.email}&a1=${data.phone}`;
-          forwardLink.target = '_blank';
-          forwardLink.click();
-        }
-        router.push(`/thankyou`);
-      });
+      .then((id) => router.push(`/survey?id=${id}`));
   };
 
   return (

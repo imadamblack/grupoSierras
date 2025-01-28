@@ -41,7 +41,7 @@ const formSteps = [
     cols: 2,
   },
   {
-    name: 'origin',
+    name: 'transfer',
     title: '¿Cuál es el origen y destino?',
     description: 'Ej: China / México',
     type: 'text',

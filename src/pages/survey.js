@@ -20,7 +20,8 @@ const formSteps = [
     description: 'Selecciona una opción por favor',
     type: 'radio',
     options: [
-      {value: '-100', label: 'Menos de $100,000 mxn'},
+      {value: '-10', label: 'Menos de $10,000 mxn'},
+      {value: '10-100', label: 'De $10,000mxn a $100,000 mxn'},
       {value: '100-500', label: 'De $100,000 mxn a $500,000 mxn'},
       {value: '500-1000', label: 'De $500,000 mxn a $1 millón mxn'},
       {value: '1000+', label: 'Más de $1 millón mxn'},
@@ -119,6 +120,10 @@ export default function Survey() {
     const formStepName = formSteps[formStep].name;
     if (errors[formStepName]) {
       setInputError(formStep);
+      return;
+    }
+    if (watch('operationAmmount') === '-10') {
+      router.push('/not-elegible');
       return;
     }
     setInputError(null);
